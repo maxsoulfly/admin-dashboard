@@ -17,7 +17,7 @@ This project is an Admin Dashboard template designed to provide a simple and cle
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/admin-dashboard.git
+    git clone https://github.com/maxsoulfly/admin-dashboard.git
     ```
 2. Navigate to the project directory:
     ```bash
