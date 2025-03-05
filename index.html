@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <aside id="navigation">
+            <div id="logo">
+                <h1>Dashboard</h1>
+            </div>
+            <nav id="nav-pages">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Messages</a></li>
+                    <li><a href="">History</a></li>
+                    <li><a href="">Tasks</a></li>
+                    <li><a href="">Communities</a></li>
+                </ul>
+            </nav>
+            <nav id="nav-settings">
+                <ul>
+                    <li><a href="">Setting</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Privacy</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <header>
+            <div id="search-bar">
+                <img src="search-icon.png" alt="search-icon">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div id="user-profile">
+                <img src="notifications.png" alt="notifications">
+                <img src="user-icon.png" alt="user-icon">
+                <p>John Doe</p>
+            </div>
+            <div id="user-panel">
+                <div id="greeting">
+                    <img src="user-icon.png" alt="user-icon">
+                    <p>Hi There!</p>
+                    <h1>John Doe (<span id="username">@johndoe</span>)</h1>
+                </div>
+                <div id="toolbar">
+                    <button id="btn-new">New</button>
+                    <button id="btn-upload">Upload</button>
+                    <button id="btn-share">Share</button>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <h2>Your Projects</h2>
+            <section id="cards-container">
+                <div class="card">
+                    <h3>Super Project</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <ul class="project-actions">
+                        <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
+                        <li><button aria-label="View"><i class="icon-eye"></i></button></li>
+                        <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Less Cool Project</h3>
+                    <p>Suspendisse potenti. Aliquam erat volutpat, sed feugiat est sed tortor convallis tincidunt. Quisque vehicula dolor id erat fermentum, vel consequat lacus dignissim.</p>
+                    <ul class="project-actions">
+                        <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
+                        <li><button aria-label="View"><i class="icon-eye"></i></button></li>
+                        <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Imposibble app</h3>
+                    <p>Vivamus elementum erat vel felis gravida, eget facilisis turpis tincidunt. Nam vestibulum, justo et aliquet sollicitudin, est odio cursus magna, a bibendum libero velit ac orci. Ut sodales est nec lorem luctus vehicula.</p>
+                    <ul class="project-actions">
+                        <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
+                        <li><button aria-label="View"><i class="icon-eye"></i></button></li>
+                        <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Easy Peasy App</h3>
+                    <p>Nullam tincidunt, nisi vel suscipit cursus, arcu metus gravida ligula, eget vehicula nunc ex non risus. Fusce interdum libero at justo posuere facilisis. Nam vestibulum, justo et aliquet sollicitudin, est odio cursus magna, a bibendum libero velit ac orci. Ut sodales est nec lorem luctus vehicula.</p>
+                    <ul class="project-actions">
+                        <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
+                        <li><button aria-label="View"><i class="icon-eye"></i></button></li>
+                        <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                    </ul>
+                </div>
+
+            </section>
+        </main>
+
+        <aside id="announcements">
+            <h2>Announcements</h2>
+            <ul>
+                <li>
+                    <h3>Site Maintanace</h3>
+                    <p>Nullam tincidunt, nisi vel suscipit cursus, arcu metus gravida ligula, eget vehicula nunc ex non risus.</p>
+                </li>
+                <li>
+                    <h3>Comunity Share Day</h3>
+                    <p>Vivamus elementum erat vel felis gravida, eget facilisis turpis tincidunts.</p>
+                </li>
+                <li>
+                    <h3>Updated Privacy Policy</h3>
+                    <p>Nam vestibulum, justo et aliquet sollicitudin, est odio cursus magna.</p>
+                </li>
+            </ul>
+        </aside>
+
+        <aside id="trending">
+            <h2>Trending</h2>
+            <ul id="trends">
+                <li class="trend">
+                    <img src="" alt="">
+                    <h4>@tegan</h4>
+                    <p>World Peace Builder</p>
+                </li>
+                <li class="trend">
+                    <img src="" alt="">
+                    <h4>@johndoe</h4>
+                    <p>Super Cool Project</p>
+                </li>
+                <li class="trend">
+                    <img src="" alt="">
+                    <h4>@kendal</h4>
+                    <p>Life Changing app</p>
+                </li>
+                <li class="trend">
+                    <img src="" alt="">
+                    <h4>@alex</h4>
+                    <p>No Traffic Maker</p>
+                </li>
+            </ul>
+        </aside>
+        
+    </div>
+</body>
+</html>
