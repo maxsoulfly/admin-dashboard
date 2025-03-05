@@ -97,7 +97,11 @@ header {
     grid-template-areas:
         "search-bar search-bar search-bar user-profile"
         "user-panel user-panel user-panel user-panel";
-    background-color: var(--default-bg-color);
+    background-color  : var(--default-bg-color);
+    height            : auto;
+    max-height        : 10em;
+    grid-template-rows: 1fr 1fr;
+
 
 
 }
@@ -159,6 +163,30 @@ header {
     grid-area      : user-panel;
     display        : flex;
     justify-content: space-between;
+}
+
+#greeting {
+    display    : flex;
+    align-items: center;
+    padding    : var(--main-paddng);
+    gap        : 1em;
+
+    & .avatar {
+        grid-area: avatar;
+        width    : 4em;
+        height   : 4em;
+    }
+
+    & .greeting {
+        grid-area: greeting;
+        height   : 1em;
+        font-size: 1em;
+    }
+
+    & .username {
+        grid-area: username;
+        font-size: 1.5em;
+    }
 }
 
 #content {
