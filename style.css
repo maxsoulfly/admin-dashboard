@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        "navigation header"
+        "navigation content";
+}
+
+#navigation {
+    grid-area: navigation;
+}
+
+header {
+    grid-area: header;
+    display  : grid;
+    grid-template-areas:
+        "search-bar user-profile"
+        "user-panel user-panel";
+}
+
+#search-bar {
+    grid-area: search-bar;
+}
+
+#user-profile {
+    grid-area: user-profile;
+}
+
+#user-panel {
+    grid-area      : user-panel;
+    display        : flex;
+    justify-content: space-between;
+}
+
+#content {
+    grid-area: content;
+    display  : grid;
+    grid-template-areas:
+        "main announcements"
+        "main trends";
+}
+
+main {
+    grid-area: main;
+}
+
+#announcements {
+    grid-area: announcements;
+}
+
+#trends {
+    grid-area: trends;
+}
