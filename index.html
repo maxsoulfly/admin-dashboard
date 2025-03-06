@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+
     <title>Admin Dashboard</title>
 </head>
 <body>
     <div class="container">
         <aside id="navigation">
             <div id="logo">
-                <h1>Dashboard</h1>
+                <i class="mdi mdi-view-dashboard"></i>
+                <h1></i>Dashboard</h1>
             </div>
             <nav id="nav-pages">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Messages</a></li>
-                    <li><a href="">History</a></li>
-                    <li><a href="">Tasks</a></li>
-                    <li><a href="">Communities</a></li>
+                    <li><i class="mdi mdi-home"></i><a href="">Home</a></li>
+                    <li><i class="mdi mdi-card-account-details-outline"></i><a href="">Profile</a></li>
+                    <li><i class="mdi mdi-chat"></i><a href="">Messages</a></li>
+                    <li><i class="mdi mdi-history"></i><a href="">History</a></li>
+                    <li><i class="mdi mdi-file-multiple"></i><a href="">Tasks</a></li>
+                    <li><i class="mdi mdi-account-group"></i><a href="">Communities</a></li>
                 </ul>
             </nav>
             <nav id="nav-settings">
                 <ul>
-                    <li><a href="">Setting</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Privacy</a></li>
+                    <li><i class="mdi mdi-cog"></i><a href="">Setting</a></li>
+                    <li><i class="mdi mdi-help-box"></i><a href="">Support</a></li>
+                    <li><i class="mdi mdi-shield-check"></i><a href="">Privacy</a></li>
                 </ul>
             </nav>
         </aside>
 
         <header>
             <div id="search-bar">
-                <img src="search-icon.png" alt="search-icon">
+                <i class="mdi mdi-magnify"></i>
                 <input type="text" placeholder="Search...">
             </div>
 
             <div id="user-profile">
-                <img src="notifications.png" alt="notifications">
+                <i class="mdi mdi-bell-ring"></i>
                 <img src="user-icon.png" alt="user-icon">
                 <p>John Doe</p>
             </div>
-            
+
             <div id="user-panel">
                 <div id="greeting">
                     <img src="user-icon.png" alt="user-icon">
@@ -60,41 +63,65 @@
         <div id="content">
             <main>
                 <h2>Your Projects</h2>
-                <section id="cards-container">
-                    <div class="card">
+                <section id="projects">
+                    <div class="project">
                         <h3>Super Project</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         <ul class="project-actions">
-                            <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
-                            <li><button aria-label="View"><i class="icon-eye"></i></button></li>
-                            <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                            <li>
+                                <i class="mdi mdi-star-plus-outline"></i>
+                            </li>
+                            <li>
+                                <a href=""><i class="mdi mdi-eye-plus-outline"></i></a>
+                            </li>
+                            <li>
+                                <i class="mdi mdi-share-variant-outline"></i>
+                            </li>
                         </ul>
                     </div>
-                    <div class="card">
+                    <div class="project">
                         <h3>Less Cool Project</h3>
                         <p>Suspendisse potenti. Aliquam erat volutpat, sed feugiat est sed tortor convallis tincidunt. Quisque vehicula dolor id erat fermentum, vel consequat lacus dignissim.</p>
                         <ul class="project-actions">
-                            <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
-                            <li><button aria-label="View"><i class="icon-eye"></i></button></li>
-                            <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                            <li>
+                                <i class="mdi mdi-star-plus-outline"></i>
+                            </li>
+                            <li>
+                                <a href=""><i class="mdi mdi-eye-plus-outline"></i></a>
+                            </li>
+                            <li>
+                                <i class="mdi mdi-share-variant-outline"></i>
+                            </li>
                         </ul>
                     </div>
-                    <div class="card">
+                    <div class="project">
                         <h3>Imposibble app</h3>
                         <p>Vivamus elementum erat vel felis gravida, eget facilisis turpis tincidunt. Nam vestibulum, justo et aliquet sollicitudin, est odio cursus magna, a bibendum libero velit ac orci. Ut sodales est nec lorem luctus vehicula.</p>
                         <ul class="project-actions">
-                            <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
-                            <li><button aria-label="View"><i class="icon-eye"></i></button></li>
-                            <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                            <li>
+                                <i class="mdi mdi-star-plus-outline"></i>
+                            </li>
+                            <li>
+                                <a href=""><i class="mdi mdi-eye-plus-outline"></i></a>
+                            </li>
+                            <li>
+                                <i class="mdi mdi-share-variant-outline"></i>
+                            </li>
                         </ul>
                     </div>
-                    <div class="card">
+                    <div class="project">
                         <h3>Easy Peasy App</h3>
                         <p>Nullam tincidunt, nisi vel suscipit cursus, arcu metus gravida ligula, eget vehicula nunc ex non risus. Fusce interdum libero at justo posuere facilisis. Nam vestibulum, justo et aliquet sollicitudin, est odio cursus magna, a bibendum libero velit ac orci. Ut sodales est nec lorem luctus vehicula.</p>
                         <ul class="project-actions">
-                            <li><button aria-label="Favorite"><i class="icon-star"></i></button></li>
-                            <li><button aria-label="View"><i class="icon-eye"></i></button></li>
-                            <li><button aria-label="Share"><i class="icon-link"></i></button></li>
+                            <li>
+                                <i class="mdi mdi-star-plus-outline"></i>
+                            </li>
+                            <li>
+                                <a href=""><i class="mdi mdi-eye-plus-outline"></i></a>
+                            </li>
+                            <li>
+                                <i class="mdi mdi-share-variant-outline"></i>
+                            </li>
                         </ul>
                     </div>
                 </section>

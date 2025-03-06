@@ -1,24 +1,103 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #1992D4;
+    --primary-color   : #fff;
+    --secondary-color : #e2e8f0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
 .container {
     display: grid;
     grid-template-areas:
         "navigation header"
         "navigation content";
+    height    : auto;
+    min-height: 100vh;
 }
 
 #navigation {
     grid-area: navigation;
+
+    background-color: var(--primary-bg-color);
+    color           : var(--primary-color);
+
+
+    & a {
+        color          : var(--primary-color);
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    & nav {
+        margin   : 2em auto;
+        font-size: 1.2em;
+
+        padding: 0 4em 0 2em;
+
+        & .mdi {
+            margin-right: 1em;
+        }
+
+        & li {
+            margin-bottom: 1em;
+            font-weight  : 600;
+        }
+
+    }
+}
+
+#logo {
+    color        : #fff;
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 2em;
+    margin-top   : 1em;
+
+    padding-left: 1em;
+
+    & h1 {
+        font-size  : 1.5rem;
+        font-weight: 500;
+
+    }
+
+    & i {
+        margin-right: 10px;
+        font-size   : 3rem;
+
+    }
+
 }
 
 header {
     grid-area: header;
     display  : grid;
     grid-template-areas:
-        "search-bar user-profile"
-        "user-panel user-panel";
+        "search-bar search-bar user-profile"
+        "user-panel user-panel user-panel";
 }
 
 #search-bar {
     grid-area: search-bar;
+
+    padding: 1em;
 }
 
 #user-profile {
@@ -35,12 +114,13 @@ header {
     grid-area: content;
     display  : grid;
     grid-template-areas:
-        "main announcements"
-        "main trends";
+        "main main announcements"
+        "main main trends";
 }
 
 main {
-    grid-area: main;
+    grid-area       : main;
+    background-color: #e2e8f0;
 }
 
 #announcements {
@@ -49,4 +129,13 @@ main {
 
 #trends {
     grid-area: trends;
+}
+
+#projects {
+    grid-area: projects;
+    display  : grid;
+    grid-template-areas:
+        "project project"
+        "project project"
+        "project project";
 }
