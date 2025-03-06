@@ -8,19 +8,33 @@
     --primary-bg-color  : #1992D4;
     --primary-color     : #fff;
     --secondary-bg-color: #e2e8f0;
+    --secondary-color   : #f0b429;
     --default-bg-color  : #fff;
     --default-color     : #000;
+    --text-color        : #707070;
 
 
-    --main-paddng: 2em;
+    --box-shadow   : 0 0 10px #0000005a;
+    --border-radius: 0.5em;
+    --main-paddng  : 2em;
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family     : Roboto, sans-serif;
+    background-color: var(--secondary-bg-color);
 }
 
 ul {
     list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--default-color);
 }
 
 
@@ -29,9 +43,10 @@ ul {
     display: grid;
     grid-template-areas:
         "navigation header"
-        "navigation content";
-    height    : auto;
-    min-height: 100vh;
+        "navigation content"
+    ;
+    height       : auto;
+    /* min-height: 100vh; */
 }
 
 #navigation {
@@ -69,7 +84,7 @@ ul {
 }
 
 #logo {
-    color        : #fff;
+    color        : var(--primary-color);
     display      : flex;
     align-items  : center;
     margin-bottom: 2em;
@@ -80,6 +95,7 @@ ul {
     & h1 {
         font-size  : 1.5rem;
         font-weight: 500;
+        color      : var(--primary-color);
 
     }
 
@@ -97,13 +113,12 @@ header {
     grid-template-areas:
         "search-bar search-bar search-bar user-profile"
         "user-panel user-panel user-panel user-panel";
-    background-color  : var(--default-bg-color);
-    height            : auto;
-    max-height        : 10em;
-    grid-template-rows: 1fr 1fr;
-
-
-
+    background-color   : var(--default-bg-color);
+    /* height          : auto;
+    max-height         : 8em; */
+    margin             : 0;
+    padding            : 0;
+    box-shadow         : var(--box-shadow);
 }
 
 #search-bar {
@@ -133,11 +148,13 @@ header {
 #user-profile {
     grid-area: user-profile;
 
-    width          : 50%;
+    width          : 100%;
     display        : flex;
-    justify-content: space-around;
+    flex-direction : row;
+    justify-content: flex-start;
     align-items    : center;
     height         : 4em;
+    padding        : 0;
 
     & i {
         font-size   : 1.5em;
@@ -163,6 +180,9 @@ header {
     grid-area      : user-panel;
     display        : flex;
     justify-content: space-between;
+    margin         : 0;
+    padding        : 0;
+    height         : 6em;
 }
 
 #greeting {
@@ -189,17 +209,41 @@ header {
     }
 }
 
+#toolbar {
+    display        : flex;
+    justify-content: space-between;
+    padding        : var(--main-paddng);
+    gap            : 2em;
+    padding-right  : 5em;
+
+    button {
+        padding         : 0.5em 2em;
+        border          : none;
+        border-radius   : 2em;
+        background-color: var(--primary-bg-color);
+        color           : var(--primary-color);
+        font-weight     : 600;
+        cursor          : pointer;
+    }
+}
+
 #content {
     grid-area: content;
     display  : grid;
     grid-template-areas:
         "main main announcements"
         "main main trends";
+
 }
 
 main {
-    grid-area       : main;
-    background-color: #e2e8f0;
+    grid-area: main;
+    padding  : var(--main-paddng);
+
+    & h2 {
+        margin-left: 1em;
+    }
+
 }
 
 #announcements {
@@ -211,10 +255,139 @@ main {
 }
 
 #projects {
-    grid-area: projects;
-    display  : grid;
-    grid-template-areas:
-        "project project"
-        "project project"
-        "project project";
+    grid-area            : projects;
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+
+
+}
+
+.project {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    margin          : .8em;
+    padding         : 1em;
+    border-radius   : var(--border-radius);
+    background-color: var(--default-bg-color);
+    box-shadow      : var(--box-shadow);
+    border-left     : var(--secondary-color) .5em solid;
+
+    & h3 {
+        /* color        : var(--default-color); */
+        margin-bottom: .2em;
+    }
+
+    & p {
+        color: var(--text-color);
+    }
+
+    & ul.project-actions {
+        display        : flex;
+        justify-self   : flex-start;
+        padding        : 0;
+        margin         : 0;
+        list-style-type: none;
+        justify-content: flex-end;
+
+        & li {
+            padding  : 0.5em;
+            font-size: 1.5em;
+        }
+
+
+        & a {
+            color          : var(--default-color);
+            text-decoration: none;
+        }
+
+        & a:hover,
+        a.active {
+            color          : var(--secondary-color);
+            text-decoration: none;
+        }
+    }
+}
+
+#announcements {
+    /* padding: var(--main-paddng); */
+    margin-top   : var(--main-paddng);
+    margin-bottom: var(--main-paddng);
+
+    & h2 {}
+
+    & ul {
+
+        margin-top      : .5em;
+        background-color: var(--default-bg-color);
+        padding         : var(--main-paddng);
+        margin-right    : var(--main-paddng);
+        box-shadow      : var(--box-shadow);
+        border-radius   : var(--border-radius);
+        width           : 300px;
+
+        & li:not(:last-child) {
+            margin-bottom : 1em;
+            padding-bottom: 1em;
+            border-bottom : var(--secondary-bg-color) 1px solid;
+        }
+
+        & p {
+            color    : var(--text-color);
+            font-size: .8em;
+        }
+
+        & h4 {
+            /* font-size    : .8em; */
+            margin-bottom: .2em;
+        }
+    }
+}
+
+#trending {
+    /* padding: var(--main-paddng); */
+
+    & h2 {}
+
+    & ul {
+
+        margin-top      : .5em;
+        background-color: var(--default-bg-color);
+        padding         : var(--main-paddng);
+        margin-right    : var(--main-paddng);
+        box-shadow      : var(--box-shadow);
+        border-radius   : var(--border-radius);
+        width           : 300px;
+
+        & li {
+            display      : flex;
+            gap          : 1em;
+            margin-bottom: 1em;
+
+            & :last-child {
+                margin-bottom: 0;
+            }
+
+            & img {
+                width : 3em;
+                height: auto;
+            }
+
+            & .text {
+                & p {
+                    color    : var(--text-color);
+                    font-size: .8em;
+                }
+
+                & h4 {
+                    font-size    : .9em;
+                    margin-bottom: .2em;
+                    font-weight  : 400;
+                }
+            }
+        }
+
+
+
+    }
 }
