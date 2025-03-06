@@ -229,11 +229,7 @@ header {
 
 #content {
     grid-area: content;
-    display  : grid;
-    grid-template-areas:
-        "main main announcements"
-        "main main trends";
-
+    display  : flex;
 }
 
 main {
