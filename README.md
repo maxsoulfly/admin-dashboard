@@ -9,6 +9,9 @@ This project is an Admin Dashboard template designed to provide a simple and cle
 - Settings and Configuration
 - Responsive Design
 
+## Live Preview
+- https://maxsoulfly.github.io/admin-dashboard/
+
 ## Technologies Used
 - HTML
 - CSS
